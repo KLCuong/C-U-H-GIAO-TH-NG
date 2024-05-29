@@ -30,6 +30,9 @@ export default function FormUrgent() {
   const navigateToViewRequest = () => {
     navigate("/createrequest");
   };
+  const navigateToViewFeedBack = () => {
+    navigate("/Feedback");
+  };
   return (
     <Box
       sx={{
@@ -52,15 +55,16 @@ export default function FormUrgent() {
             sx={{
               fontSize: { md: "30px", xsm: "28px", xs: "23px" },
               pt: { xs: "20%" },
-              pb: { xs: "10%", md: "5%" },
+              pb: { xs: "10%", md: "5%",
+                display: "flex", justifyContent: "center"},
             }}
           >
-            Now having 30 requests
+            Request Here
           </Typography>
           <Box
             sx={{
               display: "flex",
-              paddingBottom: { md: "100px", xs: "60px" },
+              //paddingBottom: { md: "100px", xs: "60px" },
               cursor: "pointer",
             }}
             onClick={handleClickOpen}
@@ -94,16 +98,24 @@ export default function FormUrgent() {
             </DialogActions>
           </Dialog>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Typography sx={{ fontWeight: 600 }}>
-              Let's view all forms!
-            </Typography>
+
           </Box>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Button
               onClick={navigateToViewRequest}
-              sx={{ color: "#d9d9d9", mb: 3, cursor: "pointer" }}
+              sx={{ color: "#d9d9d9", mb: 3, cursor: "pointer"  }}
             >
-              View Now
+              <Button sx={{ display: "flex", justifyContent: "center" }}>
+              Request Now
+              </Button>
+            </Button>
+            <Button
+                onClick={navigateToViewFeedBack}
+                sx={{ color: "#d9d9d9", mb: 3, cursor: "pointer"  }}
+            >
+              <Button sx={{ display: "flex", justifyContent: "center" }}>
+                Feedback
+              </Button>
             </Button>
           </Box>
         </Box>
