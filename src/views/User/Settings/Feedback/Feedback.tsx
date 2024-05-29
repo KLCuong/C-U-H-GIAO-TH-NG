@@ -96,19 +96,27 @@ export default function Feedback() {
                       <Typography sx={{ fontSize: "12px" }}>
                         Company Name
                       </Typography>
-                      {feedback.nameCompany}
+                      <Box sx={{ mt: 2 }}>
+                        {feedback.nameCompany}
+                      </Box>
+
                     </Box>
                     <Box>
                       <Typography sx={{ fontSize: "12px" }}>
                         Location
                       </Typography>
-                      {feedback.location}
+                      <Box sx={{ mt: 2 }}>
+                        {feedback.location}
+                      </Box>
+
                     </Box>
                     <Box>
                       <Typography sx={{ fontSize: "12px" }}>
                         Service Name
                       </Typography>
-                      {feedback.serviceName}
+                      <Box sx={{ mt: 2 }}>
+                        {feedback.serviceName}
+                      </Box>
                     </Box>
                   </Box>
                   <Box
